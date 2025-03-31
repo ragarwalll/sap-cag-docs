@@ -1,0 +1,112 @@
+site_name: Cloud Application Generator
+repo_url: https://github.com/ragarwalll/sap-cag
+site_url: https://therahulagarwal.com/sap-cag-docs/
+repo_name: github.com/ragarwalll/sap-cag
+site_description: "Cloud Application Generator (CAG) is a tool that helps developers create cloud-native applications on SAP Business Technology Platform (BTP). It provides a set of templates and best practices to accelerate the development process, ensuring that applications are built with the latest standards and technologies."
+
+nav:
+  - "Docs":
+      - "Guide" : "index.md"
+      - "Platform":
+        - "Visual Studio Code" : "docs/platform/vscode.md"
+        - "Command Line Interface" : "docs/platform/cli.md"
+      - "Packages":
+        - "Frontend":
+          - "UI5" : "docs/packages/frontend/ui5.md"
+          - "React" : "docs/packages/frontend/react.md"
+        - "Backend":
+          - "Spring Boot" : "docs/packages/backend/spring-boot.md"
+          - "Node JS" : "docs/packages/backend/nodejs.md"
+          - "Python" : "docs/packages/backend/python.md"
+      - "Others":
+        - "Multi Target Application": "docs/others/mta.md"
+        - "BTP Services":
+          - "Extended UAA": "docs/others/services/xsuaa.md"
+          - "HTML5 Repository": "docs/others/services/html5-repo.md"
+  - "Outline":
+      - "Background": "outline/background.md"
+      - "Objectives": "outline/objectives.md"
+      - "Scope of Work": "outline/scope-of-work.md"
+      - "Literature References": "outline/literature-references.md"
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  # 404 page
+  static_templates:
+    - 404.html
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - navigation.footer
+    - navigation.tracking
+    - search.share
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: black
+      accent: black
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: black
+      accent: black
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/ragarwalll
+
+plugins:
+  - include-markdown
+  - offline
+  - search
+
+markdown_extensions:
+  - def_list
+  - tables
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - "assets/css/style.css"
+
+copyright: |
+  &copy; 2025 <a href="https://github.com/ragarwalll" target="_blank" rel="noopener">Rahul Agarwal</a>
